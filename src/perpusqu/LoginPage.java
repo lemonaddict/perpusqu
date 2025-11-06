@@ -27,9 +27,7 @@ class DatabaseConnector extends DatabaseConnection {
     Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, USER, PASSWORD);
     }
-}
-
-public class LoginPage extends javax.swing.JFrame {
+}public class LoginPage extends javax.swing.JFrame {
 
     static final String query = "SELECT * FROM user";
     private final DatabaseConnection dbConnection = new DatabaseConnector();

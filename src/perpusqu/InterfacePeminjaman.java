@@ -35,6 +35,7 @@ public class InterfacePeminjaman extends javax.swing.JFrame {
     static final String query = "SELECT * FROM buku";
     private final DatabaseConnection dbConnection = new DatabaseConnector();
     DefaultTableModel model;
+    private int selectedPeminjamanId = -1;
     
     String unama;
     String unim;
@@ -266,6 +267,7 @@ public class InterfacePeminjaman extends javax.swing.JFrame {
     private void gotomenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotomenuActionPerformed
         // TODO add your handling code here:
         InterfaceUtama IU = new InterfaceUtama();
+        IU.setUserInfo(this.unama, this.unim);
         IU.show();
         
         dispose();
